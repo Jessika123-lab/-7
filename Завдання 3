@@ -1,0 +1,10 @@
+n=int(input('кількість рядків n='))
+m=int(input('кількість елементів m='))
+a=[[float(input('a[{0}][{1}]='.format(i,j))) for j in range(m)] for i in range(n)]
+print("Матриця a={0}".format(a))
+k=int(input('кількість рядків n='))
+s=int(input('кількість елементів m='))
+b=[[float(input('b[{0}][{1}]='.format(n,l))) for l in range(s)] for n in range(k)]
+print("Матриця b={0}".format(b))
+c=a*b
+print("c=",c)

@@ -1,0 +1,16 @@
+n=int(input('кількість рядків n='))
+m=int(input('кількість елементів m='))
+a=[[float(input('a[{0}][{1}]='.format(i,j))) for j in range(m)] for i in range(n)]
+print("Матриця a={0}".format(a))
+multiplication=1
+for i in range(n):
+    for j in range(n):
+        if i == j:
+            break
+        if i != j:
+            if a[i][j] > 0:
+                multiplication *= a[i][j]
+                print(a[i][j])
+
+
+print("multiplication=",multiplication)

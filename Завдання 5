@@ -1,0 +1,11 @@
+n=int(input('кількість рядків n='))
+m=n
+a=[[float(input('a[{0}][{1}]='.format(i,j))) for j in range(m)] for i in range(n)]
+print("Матриця a={0}".format(a))
+dobutok = 1
+for j in range(m):
+    for i in range(n):
+        if a[i][j] < 0:
+         break
+    else: dobutok*=a[i][j]
+print(dobutok)

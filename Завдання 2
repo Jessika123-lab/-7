@@ -1,1 +1,25 @@
+import random
+n=int(input("кількість рядків та стовпців: "))
 
+a=[[random.randint(-3,5)  for j in range(n)] for i in range(n)]
+b=[]
+for row in a:
+    row_str=['{0:5d}'.format(el) for el in row]
+    b.append(row_str)
+
+b=[''.join([ '{0:7d}'.format(el) for el in row])   for row in a]
+print(*b,sep='\n')
+c=[]
+row=int(input('виберіть № рядка: '))
+column=int(input('виберіть № стовпця: '))
+v=[]+a[row]
+print(v)
+for j in range(n):
+    c+=[a[j][column]]
+print(c)
+k=[]
+for i in range(n):
+    k+=[c[i]*v[i]]
+print(k)
+k=sum(k)
+print(k)
